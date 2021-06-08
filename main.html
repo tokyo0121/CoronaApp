@@ -1,0 +1,64 @@
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>コロナに負けるな！</title>
+    <script type="text/javascript" src="./js/index.js"></script>
+    <script type="text/javascript" src="./js/menu.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="./jqvmap-master/dist/jquery.vmap.js"></script>
+    <script type="text/javascript" src="./jqvmap-master/dist/maps/jquery.vmap.world.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      jQuery(document).ready(function() {
+        jQuery('#vmap').vectorMap({
+          map: 'world_en',
+          backgroundColor: '#bbddff',
+          color: '#ffffff',
+          hoverOpacity: 0.8,
+          selectedColor:"#ffff88",
+          showTooltip:true,
+          multiSelectRegion:true,
+          enableZoom: false,
+          scaleColors: ['#C8EEFF', '#006491'],
+          normalizeFunction: 'linear',
+          onLoad : function (element, code, region){
+
+          },
+          onRegionOver : function (element, code, region){
+
+          },
+          onRegionOut : function (element, code, region){
+
+          },
+          onRegionSelect: function(element, code, region){
+
+          },
+          onRegionDeselect: function(element, code, region){
+
+          }
+        });
+      });
+    </script>
+    <script src="https://unpkg.com/glottologist"></script>
+
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="/css/menu.css">
+
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-left">
+          <img class="logo" src="#">
+        </div>
+        <span class="fa fa-bars menu-icon"></span>
+
+      </div>
+    </header>
+    <div id="vmap" style="width: 600px; height: 400px;"></div>
+
+
+
+
+
+  </body>
+</html>
