@@ -9,23 +9,61 @@
     <script type="text/javascript" src="./jqvmap-master/dist/jquery.vmap.js"></script>
     <script type="text/javascript" src="./jqvmap-master/dist/maps/jquery.vmap.world.js" charset="utf-8"></script>
     <link rel="stylesheet" href="css/stylesheet.css">
-    <link rel="stylesheet" href="/css/menu.css">
+    <link rel="stylesheet" href="css/menu.css">
 
   </head>
   <body>
     <header>
-      <div class="container">
         <div class="header-left">
-          <img class="logo" src="#">
+          <p>コロナサイト（仮）</p>
         </div>
-        <span class="fa fa-bars menu-icon"></span>
-
-      </div>
     </header>
+    <div class="container">
+      <ul class="tab">
+        <li><a href="#asia">Asia</a></li>
+        <li><a href="#america">America</a></li>
+        <li><a href="#europe">Europe</a></li>
+        <li><a href="#africa">Africa</a></li>
+        <li><a href="#oceania">Oceania</a></li>
+      </ul>
+
+      <div class="area" id="asia">
+        <h2>アジア</h2>
+        <div class="inner">
+          <button><img src="./flags/japan.png"></button>
+          <button><img src="./flags/n_korea.png"></button>
+        </div>
+      </div>
+      <div class="area" id="america">
+        <h2>アメリカ</h2>
+        <div class="inner">
+          <button><img src="./flags/usa.png"></button>
+          <button><img src="./flags/canada.png"></button>
+        </div>
+      </div>
+      <div class="area" id="europe">
+        <h2>ヨーロッパ</h2>
+        <div class="inner">
+          <button><img src="./flags/uk.png"></button>
+        </div>
+      </div>
+      <div class="area" id="africa">
+        <h2>アフリカ</h2>
+        <div class="inner">
+          <button><img src="./flags/s_africa.png"></button>
+        </div>
+      </div>
+      <div class="area" id="oceania">
+        <h2>オセアニア</h2>
+        <div class="inner">
+          <button><img src="./flags/australia.png"></button>
+          <button><img src="./flags/newzealand.png"></button>
+        </div>
+      </div>
+    </div>
 
 
-
-
-
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="js/area.js"></script>
   </body>
 </html>

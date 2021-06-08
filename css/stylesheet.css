@@ -1,18 +1,35 @@
 body{
   margin: 0;
   font-family: Arial,'ＭＳ Ｐゴシック',sans-serif ;
+  height: 100%;
+  font-family: 'Georgia','游明朝体+36ポかな','YuMincho +36p Kana','Yu Mincho Light','YuMincho','Yu Mincho','游明朝体',sans-serif;
 }
+
+body:after {/*擬似要素をつくる*/
+  position: fixed;/*固定配置*/
+  top: 0; left: 0;/*左上に固定*/
+  width: 100%; height: 100%;/*画面全体を覆う*/
+  content: "";
+  background: linear-gradient(to bottom right, #E3FDF5 0%, #FFE6FA 100%);
+  z-index: -1;/*背景にするため*/
+}
+
 
 header{
   height: 65px;
   width: 100%;
-  background-color: rgba(3, 18, 94, 0.86);
+  background: rgb(142, 198, 215);
   position: fixed;
   top: 0;
   z-index: 10;
+  color: #fff;
+  align-items: center;
+  display: flex;
+  padding-left: 30px;
 }
 
 .header-left{
+  font-size: 30px;
   float: left;
 }
 
@@ -31,5 +48,107 @@ header{
 }
 
 .header-right a:hover{
-  background-color: rgba(255, 255, 255, 0.3);
+  background: rgb(142, 198, 215);
+}
+
+/*中身*/
+.container{
+  margin:130px auto;
+  max-width: 960px;
+  background:#fefefe;
+}
+.area h2{
+  font-size:50px;
+  margin:0 0 20px 10px;
+}
+
+.area li{
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  font-size: 25px;
+}
+
+ul{
+  list-style:none;
+}
+
+a{
+  color:#333;
+  text-decoration: none;
+}
+
+/*地域別*/
+/*tabの形状*/
+.tab{
+	display: flex;
+	flex-wrap: wrap;
+}
+.tab li a{
+	display: block;
+	background:#7eafcd;
+	margin:0 2px;
+	padding:10px 20px;
+  width: 100px;
+  font-size: 20px;
+  color: #fff;
+}
+
+/*liにactiveクラスがついた時の形状*/
+.tab li.active a{
+	background:#fff;
+  color: rgb(11, 57, 115);
+}
+
+/*エリアの表示非表示と形状*/
+.area {
+	display: none;/*はじめは非表示*/
+	opacity: 0;/*透過0*/
+	background: #fff;
+	padding:50px 20px;
+}
+
+/*areaにis-activeというクラスがついた時の形状*/
+.area.is-active {
+    display: block;/*表示*/
+    animation-name: displayAnime;/*ふわっと表示させるためのアニメーション*/
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes displayAnime{
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.area h2{
+  font-size:40px;
+  margin:0 0 20px 10px;
+}
+
+.area li{
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.inner {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.inner img{
+  width: 180px;
+  height: auto;
+  padding: auto;
+}
+
+button{
+  border: none;
+  background: #f1f1f1;
+  cursor: pointer;
+  opacity: 0.85;
 }
